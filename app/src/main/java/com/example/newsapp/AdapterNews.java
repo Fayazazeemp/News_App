@@ -46,7 +46,9 @@ public class AdapterNews extends RecyclerView.Adapter<AdapterNews.NewsVH> {
             public void onClick(View v) {
                 Intent newIntent = new Intent(context,NewsDetailsActivity.class);
                 newIntent.putExtra("URL",dataItem.getNewsURL());
+                newIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(newIntent);
+
             }
         });
 
